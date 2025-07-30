@@ -14,6 +14,8 @@ builder.Services.Configure<MongoDBSettings>(
     builder.Configuration.GetSection("MongoDBSettings"));
 builder.Services.AddSingleton<UserService>();
 builder.Services.AddSingleton<JobService>();
+builder.Services.AddSingleton<ProfileService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
